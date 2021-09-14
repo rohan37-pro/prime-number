@@ -12,7 +12,7 @@ class prime:
 
 
 while True:
-	mode = input("what do you want check prime(p)/quit(q) : ")
+	mode = input("select -  check prime(p)/quit(q) : ")
 	if mode == 'p':
 		num = int(input("enter a number : "))
 		prime123 = prime()
