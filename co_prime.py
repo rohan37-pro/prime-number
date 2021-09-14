@@ -24,11 +24,10 @@ class prime:
 
 
 while True:
-	mode = input("what do you want check co-prime(c)/quit(q) : ")
+	mode = input("select - check co-prime(c)/quit(q) : ")
 	if mode == 'c':
 		num1 = int(input("enter 1st number : "))
 		num2 = int(input("enter 2nd number : "))
-		
 		prime.check_coprime(num1,num2)
 
 	if mode == "q":
