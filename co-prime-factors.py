@@ -1,3 +1,4 @@
+import time
 
 class factor:
 	"""this programme is for finding the co-prime factors of a number
@@ -7,15 +8,19 @@ class factor:
 	"""
 
 	def __init__(self):
-		self.number = int(input("enter a number : "))
-		self.co_prime_factor = []
-		factor.check_factor(self,self.number)		
+		self.number = input("enter a number : ")
+		self.start = time.time()
+		if self.number != "quit":
+			self.co_prime_factor = []
+			factor.check_factor(self,int(self.number))		
 
 	def number_list(self,number):
 		num_list = []
-		for i in range(2,number+1):
+		for i in range(2,int(number**(1/2))+1):
 			if number%i == 0:
 				num_list.append(i)
+				num_list.append(number//i)
+		num_list.append(number)
 		return num_list
 
 	def check_coprime(self,num1,num2):
@@ -30,12 +35,14 @@ class factor:
 			self.co_prime_factor.append((num1,num2))
 
 	def check_factor(self,num):
-		for i in range(2,num//2+1):
+		for i in range(2,int(num**(1/2))+1):
 			if num%i == 0 :
 				self.check_coprime(i,num//i)
 
-
+print("you can type 'quit' to exit")
 while True:
 	co_primes  = factor()
+	if co_primes.number == 'quit':
+		break
 	print(f"all co-prime factors of {co_primes.number} are \n{co_primes.co_prime_factor}")
-
+	print(f"time taken = {time.time() - co_primes.start}secs..")
