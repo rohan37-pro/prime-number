@@ -1,7 +1,6 @@
 # prime-number
 
-this programme is to find the given number is prime or not.
-and we can also check if two number are coprime or not.
+wanna play with prime numbers let's run the following programmes
 1. prime.py to check prime number
 2. co_prime.py to check if two number are co-prime
 3. co-prime-factor.py programme is to find all co-prime factors of a number. 
